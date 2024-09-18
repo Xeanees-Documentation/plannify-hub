@@ -28,26 +28,25 @@ export default function ResetPassword({ token, email }) {
     };
 
     return (
-        <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8">
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <Card>
-                    <CardHeader>
-                        <Link href="/" className="text-4xl font-black leading-relaxed tracking-tighter">
-                            Plannify<span className="text-red-500">.</span>
-                        </Link>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
-                            <form className="space-y-6" onSubmit={submit}>
-                                {/* form */}
-                            </form>
-                        </div>
-                    </CardContent>
-                </Card>
+        <GuestLayout title="Reset Password">
+            <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8">
+                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                    <Card>
+                        <CardHeader>
+                            <Link href="/" className="text-4xl font-black leading-relaxed tracking-tighter">
+                                Plannify<span className="text-red-500">.</span>
+                            </Link>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
+                                <form className="space-y-6" onSubmit={submit}>
+                                    {/* form */}
+                                </form>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </div>
             </div>
-
-        </div>
+        </GuestLayout>
     );
 }
-
-ResetPassword.layout = (page) => <GuestLayout children={page} title="Reset Password" />;

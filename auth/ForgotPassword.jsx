@@ -17,33 +17,31 @@ export default function ForgotPassword({ status }) {
     };
 
     return (
-        <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8">
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <Card>
-                    <CardHeader>
-                        <Link href="/" className="text-4xl font-black leading-relaxed tracking-tighter">
-                            Plannify<span className="text-red-500">.</span>
-                        </Link>
-                        <h2 className="text-lg font-medium leading-9 tracking-tight text-left text-muted-foreground">
-                            Forgot your password? No problem. Just let us know your email address and we will email you a
-                            password reset link that will allow you to choose a new one.
-                        </h2>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
-                            {status && <div className="mb-4 text-sm font-medium text-green-600">{status}</div>}
-                            <form className="space-y-6" onSubmit={submit}>
-                                {/* form */}
-                            </form>
-                        </div>
-                    </CardContent>
-                </Card>
+        <GuestLayout title='Forgot Password'>
+            <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8">
+                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                    <Card>
+                        <CardHeader>
+                            <Link href="/" className="text-4xl font-black leading-relaxed tracking-tighter">
+                                Plannify<span className="text-red-500">.</span>
+                            </Link>
+                            <h2 className="text-lg font-medium leading-9 tracking-tight text-left text-muted-foreground">
+                                Forgot your password? No problem. Just let us know your email address and we will email you a
+                                password reset link that will allow you to choose a new one.
+                            </h2>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
+                                {status && <div className="mb-4 text-sm font-medium text-green-600">{status}</div>}
+                                <form className="space-y-6" onSubmit={submit}>
+                                    {/* form */}
+                                </form>
+                            </div>
+                        </CardContent>
+                    </Card>
 
+                </div>
             </div>
-
-
-        </div>
+        </GuestLayout>
     );
 }
-
-ForgotPassword.layout = (page) => <GuestLayout children={page} title="Forgot Password" />;
