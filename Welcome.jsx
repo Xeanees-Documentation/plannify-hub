@@ -104,7 +104,7 @@ export default function Welcome() {
                     </div>
                 </div>
             </main>
-        </div>
+        </div>´
     );
 }
 
